@@ -6,4 +6,10 @@
     --yellow: #f5df00;
     --grey: #828282;
     --greyDark: #3a3a3a;
+
+
+    --helveticaLight: 'HelveticaLight', sans-serif;
+    --helveticaRegular: 'HelveticaRegular', sans-serif;
+    --helveticaBold: 'HelveticaBold', sans-serif;
+    --helveticaBlack: 'HelveticaBlack', sans-serif;
 }

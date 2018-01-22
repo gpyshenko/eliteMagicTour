@@ -1,0 +1,22 @@
+.langToggle {
+    display: flex;
+    align-items: center;
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        color: #9f9f9f;
+        background-color: #fff;
+        border-radius: 50%;
+        &.current {
+            color: #fff;
+            background-color: var(--violet);
+        }
+        &:nth-child(1) {
+            margin-right: 5px;
+        }
+    }
+}

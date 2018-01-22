@@ -1,6 +1,24 @@
 @font-face {
-	font-family: 'OpenSansCondensed';
+	font-family: 'HelveticaLight';
 	src:
-		url('../assets/fonts/OpenSans Condensed Light/OpenSansCondensedLight.woff') format('woff'),
-	 	url('../assets/fonts/OpenSans Condensed Light/OpenSansCondensedLight.woff2') format('woff2')
+		url('../assets/fonts/HelveticaLight/HelveticaLight.woff') format('woff'),
+	 	url('../assets/fonts/HelveticaLight/HelveticaLight.woff2') format('woff2')
+}
+@font-face {
+	font-family: 'HelveticaRegular';
+	src:
+			url('../assets/fonts/HelveticaRegular/HelveticaRegular.woff') format('woff'),
+			url('../assets/fonts/HelveticaRegular/HelveticaRegular.woff2') format('woff2')
+}
+@font-face {
+	font-family: 'HelveticaBold';
+	src:
+			url('../assets/fonts/HelveticaBold/HelveticaBold.woff') format('woff'),
+			url('../assets/fonts/HelveticaBold/HelveticaBold.woff2') format('woff2')
+}
+@font-face {
+	font-family: 'HelveticaBlack';
+	src:
+			url('../assets/fonts/HelveticaBlack/HelveticaBlack.woff') format('woff'),
+			url('../assets/fonts/HelveticaBlack/HelveticaBlack.woff2') format('woff2')
 }
