@@ -1,14 +1,16 @@
-.menu-navigation {
+.nav {
     display: flex;
+    height: 100%;
     margin-left: 11px;
     &-item {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 19px;
-        transition: background-color .3s;
-        &:hover {
-            background-color: var(--greyLight);
+        transition: padding .3s;
+        &:hover .nav-submenu {
+            display: block;
         }
     }
     &-link {
@@ -17,21 +19,138 @@
         font-weight: 300;
         text-transform: uppercase;
         color: #646464;
-        transition: color .3s;
+        transition: .3s;
         &:hover {
             color: var(--violet);
         }
         &.arrow {
+            display: flex;
+            align-items: center;
             &::after {
                 content: '';
-                position: absolute;
-                top: calc(50% - 2px);
-                left: calc(100% + 10px);
                 display: block;
-                width: 7px;
-                height: 4px;
-                background: url("../assets/icons/arrow.png");
-                background-size: cover;
+                width: 15px;
+                height: 15px;
+                margin-left: 10px;
+                background: transparent url("../assets/icons/arrow.png") 4px 6px no-repeat;
+                border-radius: 50%;
+            }
+            &:hover {
+                &::after {
+                    background: var(--violet) url("../assets/icons/arrow-white.png") 4px 6px no-repeat;
+                }
+            }
+        }
+    }
+    &-submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        display: none;
+        padding-top: 11px;
+        &-link {
+            display: block;
+            padding: 15px 9px;
+            font-size: 14px;
+            font-weight: 400;
+            white-space: nowrap;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: var(--violetDark);
+            transition: background-color .3s;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                background-color: var(--violet);
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .nav {
+        &-item {
+            padding: 0 12px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: -15px;
+        justify-content: center;
+        width: calc(100% + 30px);
+        padding: 0 15px;
+        margin: 0;
+        background-color: #fff;
+        border-top: 1px solid var(--greyLight);
+        box-shadow: 0 2px 3px rgba(0,0,0,.1);
+        &-link {
+            font-size: 13px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .nav {
+        display: none;
+        height: initial;
+        padding: 15px;
+        border-top: none;
+        &.active {
+            display: block;
+        }
+        &-item {
+            display: block;
+            padding: 0;
+            margin-bottom: 1px;
+            background-color: var(--violet);
+            &.active .nav-submenu {
+                display: block;
+            }
+        }
+        &-link {
+            position: static;
+            display: inline-block;
+            padding: 12px;
+            font-size: 13px;
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+            &.arrow {
+                display: inline-block;
+                &::after {
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    background: #fff url("../assets/icons/arrow.png") 4px 6px no-repeat;
+                    pointer-events: none;
+                }
+            }
+            &.active {
+                margin-bottom: 10px;
+            }
+        }
+        &-submenu {
+            position: static;
+            display: none;
+            padding-top: 0;
+            margin: 0 -12px -12px;
+            &-link {
+                padding: 12px 24px;
+                color: var(--grey);
+                background-color: #fff;
+                &:hover {
+                    color: var(--grey);
+                    background-color: #fff;
+                }
+                &:active {
+                    font-weight: 700;
+                }
             }
         }
     }

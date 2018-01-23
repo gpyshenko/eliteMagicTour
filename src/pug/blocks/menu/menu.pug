@@ -1,4 +1,10 @@
 .menu
     .section
         .menu-row
-            include menu-navigation
+            button.hamburger
+                img(src=require('../../../assets/icons/menu.png') alt="")
+            .menu-navigation
+                include menu-navigation
+                include menu-search
+            button.button.brand
+                | оставить заявку

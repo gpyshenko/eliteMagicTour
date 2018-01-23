@@ -1,0 +1,12 @@
+.tour {
+    width: 100%;
+    padding: 30px;
+    margin-left: 30px;
+    background: var(--green) url("../assets/img/about/bgTour.png") center bottom no-repeat;
+    &-title {
+        margin-bottom: 25px;
+        font-size: 26px;
+        font-family: var(--helveticaLight);
+        color: #fff;
+    }
+}

@@ -1,0 +1,11 @@
+.link {
+    &-default {
+        font-size: 13px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: var(--violet);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

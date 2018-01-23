@@ -10,9 +10,14 @@
 @import "blocks/banner/banner.css";
 @import "blocks/menu/menu.css";
 @import "blocks/menu/menu-navigation.css";
+@import "blocks/menu/menu-search.css";
+@import "blocks/about/about.css";
+@import "blocks/about/form-tour.css";
 
 /*Components*/
 @import "components/langToggle/langToggle.css";
+@import "components/buttons/buttons.css";
+@import "components/links/links.css";
 @import "components/buttons/hamburger.css";
 
 

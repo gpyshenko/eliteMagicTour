@@ -1,0 +1,98 @@
+.search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 34px;
+    transition: width .5s;
+    &.active {
+        width: calc(100% - 10px);
+    }
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 34px;
+        height: 34px;
+        background-color: var(--violetDark);
+        transition: background-color .5s;
+        &.active {
+            background-color: var(--violet);
+        }
+    }
+    &-input {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 34px;
+        background-color: #fff;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: .5s;
+        &.active {
+            transform: scaleX(1);
+        }
+        &::before {
+            content: 'Поиск по сайту:';
+            position: absolute;
+            top: calc(50% - 6px);
+            left: 10px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--violet);
+        }
+        input {
+            width: 100%;
+            height: inherit;
+            padding-left: 137px;
+            color: var(--grey);
+            border: 1px solid var(--greyLight);
+            transition: border-color .3s;
+            &:focus {
+                border-color: var(--violet);
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .search {
+        position: static;
+        margin-left: auto;
+        &-input {
+            &::before {
+                top: calc(50% - 5px);
+                font-size: 10px;
+            }
+            input {
+                padding-left: 100px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .search {
+        width: calc(100% - 10px);
+        &-input {
+            transform: scaleX(1);
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    .search {
+        position: static;
+        margin-left: auto;
+        &-input {
+            &::before {
+                display: none;
+            }
+            input {
+                padding-left: 10px;
+            }
+        }
+    }
+}

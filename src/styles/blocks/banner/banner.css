@@ -36,13 +36,7 @@
         transition: font-size .4s;
     }
     &-link {
-        padding: 10px 14px;
         margin-top: 10px;
-        font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-        color: inherit;
-        background-color: var(--violet);
     }
     &-controls {
         position: absolute;

@@ -1,10 +1,25 @@
-button.menu-btn.hamburger
-    img(src=require('../../../assets/icons/menu.png') alt="")
-nav.menu-navigation
-    .menu-navigation-item
-        a(href="").menu-navigation-link
+nav.nav
+    .nav-item
+        a(href="").nav-link
             | Главная
-    .menu-navigation-item
-        a(href="").menu-navigation-link.arrow
+    .nav-item
+        a(href="").nav-link.arrow
             | О нас
-        .menu-navigation-submenu
+        include menu-submenu
+    .nav-item
+        a(href="").nav-link.arrow
+            | Туры по миру
+        include menu-submenu
+    .nav-item
+        a(href="").nav-link.arrow
+            | Узбекистан
+        include menu-submenu
+    .nav-item
+        a(href="").nav-link
+            | Круизы
+    .nav-item
+        a(href="").nav-link
+            | Новости
+    .nav-item
+        a(href="").nav-link
+            | Контакты

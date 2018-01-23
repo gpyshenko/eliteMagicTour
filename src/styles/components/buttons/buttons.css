@@ -1,0 +1,17 @@
+.button {
+    &.brand {
+        padding: 10px 15px;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #fff;
+        background-color: var(--violet);
+        transition: background-color .3s;
+        &:hover {
+            background-color: var(--violetDark);
+        }
+    }
+}

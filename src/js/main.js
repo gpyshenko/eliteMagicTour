@@ -2,35 +2,20 @@ import '../styles/bundle.css';
 import 'wallop/css/wallop.css'
 import 'wallop/css/wallop--fade.css'
 
+// Импорт слайдера
 import Wallop from 'wallop';
-let wallopEl = document.querySelector('.Wallop');
-let wallop = new Wallop(wallopEl);
-setInterval(function() {
-    wallop.next();
-}, 4000);
+// Импорт скриптов слайдеров на сайте
+import slider from './sliders';
+slider.sliders(Wallop);
 
-let paginationDots = Array.prototype.slice.call(document.querySelectorAll('.banner-dot'));
+import menuSearch from './menu/menu-search';
+menuSearch.toggleSearch();
 
-paginationDots.forEach(function (dotEl, index) {
-    dotEl.addEventListener('click', function() {
-        wallop.goTo(index);
-    });
-});
+import menuNav from './menu/menu-nav';
+menuNav.navMenu();
 
-wallop.on('change', function(event) {
-    removeClass(document.querySelector('.banner-dot-current'), 'banner-dot-current');
-    addClass(paginationDots[event.detail.currentItemIndex], 'banner-dot-current');
-});
-
-function addClass(element, className) {
-    if (!element) { return; }
-    element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
-}
-
-function removeClass(element, className) {
-    if (!element) { return; }
-    element.className = element.className.replace(className, '');
-}
+import acc from './accardeon';
+acc.accardeon();
 
 
 
