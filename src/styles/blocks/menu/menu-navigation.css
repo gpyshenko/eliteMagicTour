@@ -1,0 +1,38 @@
+.menu-navigation {
+    display: flex;
+    margin-left: 11px;
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 19px;
+        transition: background-color .3s;
+        &:hover {
+            background-color: var(--greyLight);
+        }
+    }
+    &-link {
+        position: relative;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #646464;
+        transition: color .3s;
+        &:hover {
+            color: var(--violet);
+        }
+        &.arrow {
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 2px);
+                left: calc(100% + 10px);
+                display: block;
+                width: 7px;
+                height: 4px;
+                background: url("../assets/icons/arrow.png");
+                background-size: cover;
+            }
+        }
+    }
+}

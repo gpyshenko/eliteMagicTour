@@ -1,0 +1,15 @@
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--greyLight);
+    cursor: pointer;
+    img {
+        transition: opacity .3s;
+    }
+    &:hover img {
+        opacity: .8;
+    }
+}

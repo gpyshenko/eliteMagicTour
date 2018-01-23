@@ -8,9 +8,12 @@
 /*Blocks*/
 @import "blocks/header/header.css";
 @import "blocks/banner/banner.css";
+@import "blocks/menu/menu.css";
+@import "blocks/menu/menu-navigation.css";
 
 /*Components*/
 @import "components/langToggle/langToggle.css";
+@import "components/buttons/hamburger.css";
 
 
 
