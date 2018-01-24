@@ -49,30 +49,6 @@
         width: 100%;
         transition: bottom .4s;
     }
-    &-dot {
-        position: relative;
-        width: 14px;
-        height: 14px;
-        margin: 0 10px;
-        background-color: #fff;
-        border-radius: 50%;
-        &::after {
-            content: '';
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 8px;
-            height: 8px;
-            background-color: transparent;
-            border-radius: 50%;
-            transition: background-color .2s;
-        }
-        &-current {
-            &::after {
-                background-color: var(--violet);
-            }
-        }
-    }
 }
 
 @media (max-width: 1140px) {

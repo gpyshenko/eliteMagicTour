@@ -9,6 +9,9 @@
     &-block {
         max-width: 555px;
     }
+    .Title {
+        margin-bottom: 25px;
+    }
     &-txt {
         margin-bottom: 16px;
         font-weight: 300;

@@ -1,9 +1,45 @@
 .content {
     display: flex;
+    align-items: flex-start;
     padding: 60px 0;
     &-body {
         width: 100%;
-        max-width: 848px;
+        max-width: 851px;
+        &-controls {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &-aside {
+        width: 100%;
+        max-width: 259px;
+        margin-left: 30px;
+    }
+    .Title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        &-body {
+            &-controls {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        display: block;
+        &-body, &-aside {
+            max-width: none;
+        }
+        &-aside {
+            margin-top: 30px;
+            margin-left: 0;
+        }
     }
 }
 

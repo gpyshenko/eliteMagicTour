@@ -5,6 +5,16 @@
 @import "/main/section.css";
 @import "/main/container.css";
 
+/*Components*/
+@import "components/buttons/buttons.css";
+@import "components/buttons/sliders-dots.css";
+@import "components/links/links.css";
+@import "components/buttons/hamburger.css";
+@import "components/typography/typography.css";
+@import "components/langToggle/langToggle.css";
+@import "components/offer/offer.css";
+@import "components/offer/offer-stocks.css";
+
 /*Blocks*/
 @import "blocks/header/header.css";
 @import "blocks/banner/banner.css";
@@ -17,16 +27,10 @@
 @import "blocks/content/content.css";
 @import "blocks/content/offers.css";
 @import "blocks/content/aside.css";
+@import "blocks/news/news.css";
+@import "blocks/gallery/gallery.css";
+@import "blocks/reviews/reviews.css";
 @import "blocks/copyright/copyright.css";
-
-/*Components*/
-@import "components/buttons/buttons.css";
-@import "components/links/links.css";
-@import "components/buttons/hamburger.css";
-@import "components/typography/typography.css";
-@import "components/langToggle/langToggle.css";
-@import "components/offer/offer.css";
-@import "components/offer/offer-stocks.css";
 
 
 

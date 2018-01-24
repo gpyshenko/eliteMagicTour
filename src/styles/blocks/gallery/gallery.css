@@ -1,0 +1,10 @@
+.gallery {
+    &-controls {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+    }
+    &-dot {
+        border: 1px solid #e5e5e5;
+    }
+}

@@ -1,6 +1,10 @@
 .Title {
-    margin-bottom: 25px;
+    width: 100%;
     font-size: 32px;
     font-family: var(--helveticaLight);
+    line-height: 32px;
     color: var(--violet);
+    &.small {
+        font-size: 26px;
+    }
 }

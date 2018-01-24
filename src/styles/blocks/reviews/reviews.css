@@ -1,0 +1,15 @@
+.reviews {
+    background-color: var(--bright);
+    &-slide {
+        display: flex;
+    }
+    &-post {
+        display: flex;
+        align-items: flex-start;
+    }
+    &-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

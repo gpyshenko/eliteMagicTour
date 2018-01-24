@@ -1,6 +1,7 @@
 import '../styles/bundle.css';
 import 'wallop/css/wallop.css'
 import 'wallop/css/wallop--fade.css'
+import 'wallop/css/wallop--slide.css'
 
 // Импорт слайдера
 import Wallop from 'wallop';
