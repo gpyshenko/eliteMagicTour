@@ -3,10 +3,95 @@
     padding: 30px;
     margin-left: 30px;
     background: var(--green) url("../assets/img/about/bgTour.png") center bottom no-repeat;
-    &-title {
-        margin-bottom: 25px;
+    transition: max-width .4s;
+    &-header {
+        margin-bottom: 23px;
         font-size: 26px;
         font-family: var(--helveticaLight);
         color: #fff;
+    }
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &-title {
+        width: 100%;
+        margin-bottom: 7px;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &-input {
+        width: 100%;
+        &.small {
+            width: 47%;
+        }
+        &.icon {
+            position: relative;
+            &::after {
+                content: url("../assets/icons/calendar-tour.png");
+                position: absolute;
+                top: calc(50% - 13px);
+                right: 10px;
+            }
+            input {
+                padding-right: 40px;
+            }
+        }
+        input {
+            width: 100%;
+            padding: 0 15px;
+            height: 34px;
+            border: none;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .tour {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .tour {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tour {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour {
+        padding: 30px 15px;
+        &-row:nth-of-type(2) {
+            .tour-input {
+                &.small {
+                    margin: 10px 0;
+                }
+            }
+        }
+        &-input {
+            &.small {
+                width: 100%;
+            }
+            &.icon {
+                &::after {
+                    right: 5px;
+                }
+                input {
+                    padding-right: 35px;
+                }
+            }
+        }
     }
 }

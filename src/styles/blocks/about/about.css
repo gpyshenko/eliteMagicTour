@@ -9,15 +9,20 @@
     &-block {
         max-width: 555px;
     }
-    &-title {
-        margin-bottom: 25px;
-        font-size: 32px;
-        font-family: var(--helveticaLight);
-        color: var(--violet);
-    }
     &-txt {
         margin-bottom: 16px;
         font-weight: 300;
         line-height: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about {
+        &-wrapper {
+            display: block;
+        }
+        &-block {
+            max-width: 100%;
+        }
     }
 }

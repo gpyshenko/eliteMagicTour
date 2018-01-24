@@ -1,6 +1,23 @@
 .about-block.tour
-    .tour-title
+    .tour-header
         | Подбери свой тур
     form.tour-form
+        .tour-row
+            .tour-input
+                .tour-title
+                    | Страна
+                input(placeholder="Город, регион или ключевое слово")
+        .tour-row
+            .tour-title
+                | Дата
+            .tour-input.small.icon
+                input(placeholder="Отъезд")
+            .tour-input.small.icon
+                input(placeholder="Прибытие")
+        .tour-row
+            .tour-input.small
+                .tour-title
+                    | Бюджет, $
+                input(placeholder="Сумма")
         button.button.brand
             | найти тур

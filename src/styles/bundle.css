@@ -13,12 +13,15 @@
 @import "blocks/menu/menu-search.css";
 @import "blocks/about/about.css";
 @import "blocks/about/form-tour.css";
+@import "blocks/advantages/advantages.css";
+@import "blocks/copyright/copyright.css";
 
 /*Components*/
-@import "components/langToggle/langToggle.css";
 @import "components/buttons/buttons.css";
 @import "components/links/links.css";
 @import "components/buttons/hamburger.css";
+@import "components/typography/typography.css";
+@import "components/langToggle/langToggle.css";
 
 
 

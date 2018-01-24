@@ -1,0 +1,112 @@
+.advantages {
+    background-color: var(--bright);
+    &-row {
+        display: flex;
+    }
+    &-item {
+        position: relative;
+        width: 100%;
+
+        padding: 40px 0 90px;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover .advantages-overlay {
+            top: 0;
+            background-color: var(--violet);
+            .advantages {
+                &-title {
+                    font-family: var(--helveticaBold);
+                    color: var(--bright);
+                }
+                &-dscr {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 99px;
+        img {
+            margin: 0 auto;
+        }
+    }
+    &-overlay {
+        position: absolute;
+        top: calc(50% + 16px);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px 15px 0;
+        transition: .4s;
+    }
+    &-title {
+        font-size: 26px;
+        font-family: var(--helveticaLight);
+        text-align: center;
+        color: var(--violet);
+        transition: .4s;
+    }
+    &-dscr {
+        margin-top: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+}
+
+@media (max-width: 992px) {
+    .advantages {
+        &-item {
+            &:hover .advantages-overlay {
+                top: calc(50% + 26px);
+                background-color: transparent;
+                .advantages {
+                    &-title {
+                        color: var(--violet);
+                    }
+                    &-dscr {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-overlay {
+            top: calc(50% + 26px);
+        }
+        &-title {
+            font-size: 20px;
+            font-family: var(--helveticaBold);
+        }
+        &-dscr {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        &-row {
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+        &-item {
+            width: 50%;
+            padding: 40px 0;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .advantages {
+        &-item {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+    }
+}
