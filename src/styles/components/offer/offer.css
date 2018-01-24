@@ -1,0 +1,99 @@
+.offer {
+    position: relative;
+    max-width: 263px;
+    padding: 5px 5px 15px 5px;
+    border: 1px solid var(--greyLight);
+    cursor: pointer;
+    &:hover {
+        .offer {
+            &-overlay {
+                opacity: 1;
+            }
+            &-title, &-subtitle {
+                color: #fff;
+            }
+        }
+        
+    }
+    &-img {
+        margin-bottom: 14px;
+    }
+    &-body {
+        padding: 0 5px;
+    }
+    &-title, &-subtitle {
+        position: relative;
+        z-index: 6;
+        width: 100%;
+        transition: color .4s;
+    }
+    &-title {
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-family: var(--helveticaLight);
+        line-height: 24px;
+        color: var(--grey);
+    }
+    &-subtitle {
+        margin-bottom: 16px;
+        font-weight: 300;
+        color: var(--green);
+    }
+    &-date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #3a3a3a;
+        &::before {
+            content: '';
+            display: block;
+            min-width: 15px;
+            height: 17px;
+            margin-right: 7px;
+            background: url("../assets/img/offer/calendar.png") no-repeat;
+            background-size: cover;
+        }
+    }
+    &-row {
+        display: flex;
+        align-items: center;
+    }
+    &-days {
+        padding: 7px 10px;
+        margin-right: 10px;
+        color: #3a3a3a;
+        background-color: var(--yellow);
+    }
+    &-price {
+        font-size: 20px;
+        font-family: var(--helveticaLight);
+        color: var(--violet);
+    }
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        padding: 22px 10px;
+        background: var(--violet) url("../assets/img/offer/bg-stars.png") center 30px no-repeat;
+        opacity: 0;
+        transition: .4s;
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-family: var(--helveticaLight);
+        color: #fff;
+        &::after {
+            content: url("../assets/img/offer/arrow.png");
+            margin-left: 10px;
+        }
+    }
+}
