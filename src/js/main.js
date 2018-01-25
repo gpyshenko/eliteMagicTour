@@ -21,7 +21,6 @@ acc.accardeon();
 
 import Pikaday from 'pikaday'
 let inputPicker = document.querySelectorAll('.datepicker');
-let pikaSingle = document.querySelectorAll('.pika-single');
 [].forEach.call(inputPicker, function (e) {
     let picker = new Pikaday({
         field: e,
