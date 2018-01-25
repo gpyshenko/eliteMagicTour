@@ -26,10 +26,13 @@
 @import "blocks/advantages/advantages.css";
 @import "blocks/content/content.css";
 @import "blocks/content/offers.css";
-@import "blocks/content/aside.css";
 @import "blocks/news/news.css";
 @import "blocks/gallery/gallery.css";
 @import "blocks/reviews/reviews.css";
+@import "blocks/reviews/reviews-post.css";
+@import "blocks/footer/footer.css";
+@import "blocks/footer/footer-top.css";
+@import "blocks/footer/footer-bottom.css";
 @import "blocks/copyright/copyright.css";
 
 

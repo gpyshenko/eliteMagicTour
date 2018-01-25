@@ -4,7 +4,10 @@
     font-family: var(--helveticaLight);
     line-height: 32px;
     color: var(--violet);
-    &.small {
+    &.medium {
         font-size: 26px;
+    }
+    &.small {
+        font-size: 20px;
     }
 }

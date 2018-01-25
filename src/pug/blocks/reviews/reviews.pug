@@ -3,16 +3,21 @@
         .reviews-slider.Wallop.Wallop--slide
             .Wallop-list
                 .Wallop-item.reviews-slide
-                    .reviews-post
-                        .reviews-img
-                            img(src=require("../../../assets/img/reviews/avatar.png") alt="")
-                        .reviews-text
-
-                .Wallop-item
-                    .reviews-post
-                        .reviews-img
-                            img(src=require("../../../assets/img/reviews/avatar.png") alt="")
-                        .reviews-text
+                    include reviews-post
+                .Wallop-item.reviews-slide
+                    include reviews-post
+                .Wallop-item.reviews-slide
+                    include reviews-post
+                .Wallop-item.reviews-slide
+                    include reviews-post
+                .Wallop-item.reviews-slide
+                    include reviews-post
             .reviews-controls
                 button.reviews-dot.dotBtn
                 button.reviews-dot.dotBtn
+                button.reviews-dot.dotBtn
+                button.reviews-dot.dotBtn
+                button.reviews-dot.dotBtn
+
+                button.reviews-arrow.left.Wallop-buttonPrevious
+                button.reviews-arrow.right.Wallop-buttonNext
