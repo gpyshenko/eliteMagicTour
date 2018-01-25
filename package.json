@@ -32,6 +32,7 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "pikaday": "^1.7.0",
     "wallop": "^2.4.1"
   }
 }
