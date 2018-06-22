@@ -1,42 +1,19 @@
-.banner.Wallop.Wallop--fade
+mixin bannerItem(city, title)
+    .Wallop-item.banner-item
+        .section.banner-info
+            .banner-subtitle=city
+            .banner-title=title
+            a(href="").button.brand.banner-link
+                | подробнее
+.banner.Wallop--fade
     .Wallop-list.banner-list
-        .Wallop-item.banner-item
-            .section.banner-info
-                .banner-subtitle
-                    | латвия, литва, Эстония, Швеция, Финляндия
-                .banner-title
-                    | пять столиц балтики
-                a(href="").button.brand.banner-link
-                    | подробнее
-        .Wallop-item.banner-item
-            .section.banner-info
-                .banner-subtitle
-                    | другие страны
-                .banner-title
-                    | 2 слайд
-                a(href="").button.brand.banner-link
-                    | подробнее
-        .Wallop-item.banner-item
-            .section.banner-info
-                .banner-subtitle
-                    | другие страны
-                .banner-title
-                    | 3 слайд
-                a(href="").button.brand.banner-link
-                    | подробнее
-        .Wallop-item.banner-item
-            .section.banner-info
-                .banner-subtitle
-                    | другие страны
-                .banner-title
-                    | 4 слайд
-                a(href="").button.brand.banner-link
-                    | подробнее
+        +bannerItem('латвия, литва, Эстония, Швеция, Финляндия', 'пять столиц балтики')
+        +bannerItem('другие страны', '2 слайд')
+        +bannerItem('другие страны', '3 слайд')
+        +bannerItem('другие страны', '4 слайд')
 
     .banner-controls
         button.banner-dot.dotBtn
         button.banner-dot.dotBtn
         button.banner-dot.dotBtn
         button.banner-dot.dotBtn
-
-

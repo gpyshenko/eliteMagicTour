@@ -1,36 +1,4 @@
 export function sliders(Wallop) {
-    // Инициализация баннера
-    let banner = document.querySelector('.banner');
-    let sliderBanner = new Wallop(banner);
-    let bannerDots = Array.prototype.slice.call(document.querySelectorAll('.banner-dot'));
-    listener(sliderBanner, bannerDots, 4000, '.banner');
-
-    // Инициализация галереи
-    let gallery = document.querySelector('.gallery');
-    let sliderGallery = new Wallop(gallery);
-    let galleryDots = Array.prototype.slice.call(document.querySelectorAll('.gallery-dot'));
-    listener(sliderGallery, galleryDots, 4000, '.gallery');
-
-    let reviews = document.querySelector('.reviews-slider');
-    let sliderReviews = new Wallop(reviews);
-    let reviewsDots = Array.prototype.slice.call(document.querySelectorAll('.reviews-dot'));
-    listener(sliderReviews, reviewsDots, 4000, '.reviews');
-
-    // Функция настройки слайдеров
-    function listener(slider, dots, duration, selector) {
-        dots.forEach(function (dotEl, index) {
-            dotEl.addEventListener('click', function() {
-                slider.goTo(index);
-            });
-        });
-        slider.on('change', function(event) {
-            removeClass(document.querySelector(selector + ' .current'), 'current');
-            addClass(dots[event.detail.currentItemIndex], 'current');
-        });
-        setInterval(function() {
-            slider.next();
-        }, duration);
-    }
     // Функции замена классов
     function addClass(element, className) {
         if (!element) { return; }
@@ -41,6 +9,34 @@ export function sliders(Wallop) {
         if (!element) { return; }
         element.classList.remove(className);
     }
+    // Функция настройки слайдеров
+    function sliderInit(selector) {
+        let sliderSelector = selector;
+        let slider = document.querySelector(sliderSelector);
+        if(slider) {
+            slider.classList.add('Wallop');
+            let isSlider = new Wallop(slider);
+            let sliderDots = document.querySelectorAll(selector + '-dot')
+            sliderDots.forEach(function (dotEl, index) {
+                dotEl.addEventListener('click', function () {
+                    isSlider.goTo(index);
+                });
+            });
+            isSlider.on('change', function (event) {
+                removeClass(document.querySelector(selector + ' .current'), 'current');
+                addClass(sliderDots[event.detail.currentItemIndex], 'current');
+            });
+            // setInterval(function () {
+            //     slider.next();
+            // }, duration);
+        }
+    }
+
+    // Инициализация баннера
+
+    sliderInit('.banner');
+    //sliderInit('.gallery');
+    //sliderInit('.reviews');
 }
 export default {
     sliders

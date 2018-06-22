@@ -1,20 +1,10 @@
 .gallery.Wallop.Wallop--slide
     .Wallop-list
-        .Wallop-item.Wallop-item--current
-            .gallery-img
-                img(src=require("../../../assets/img/gallery/photo.jpg") alt="")
-        .Wallop-item
-            .gallery-img
-                img(src=require("../../../assets/img/gallery/photo.jpg") alt="")
-        .Wallop-item
-            .gallery-img
-                img(src=require("../../../assets/img/gallery/photo.jpg") alt="")
-        .Wallop-item
-            .gallery-img
-                img(src=require("../../../assets/img/gallery/photo.jpg") alt="")
-        .Wallop-item
-            .gallery-img
-                img(src=require("../../../assets/img/gallery/photo.jpg") alt="")
+        - var n = 1
+        while n <= 5
+            .Wallop-item
+                .gallery-img
+                    img(src=require("../../../assets/img/gallery/photo.jpg") alt=n++)
     .gallery-controls
         button.gallery-dot.dotBtn
         button.gallery-dot.dotBtn
